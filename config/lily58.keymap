@@ -29,10 +29,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
-                <&macro_wait_time 100>,
-                <&macro_wait_time 100>,
-                <&kp COMMA &kp W &kp COMMA &kp W>;
+                <&macro_wait_time 50>,
+                <&macro_tap &kp COMMA>,
+                <&macro_tap &kp W>,
+                <&macro_tap &kp COMMA>,
+                <&macro_tap &kp W>;
 
             label = "VIMW_TODAY";
         };
