@@ -13,6 +13,7 @@
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
+#define MACROS 3
 
 / {
     combos {
@@ -28,6 +29,8 @@
         vimw_today: vimw_today {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings = <&macro_tap &kp COMMA &kp W &kp COMMA &kp W>;
             label = "VIMW_TODAY";
         };
@@ -69,7 +72,8 @@
             >;
         };
 
-        Macros {
+        macros_layer {
+            label = "Macros";
             bindings = <
 &bootloader  &trans  &none   &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -84,8 +88,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <LOWER RAISE>;
+            then-layer = <MACROS>;
         };
     };
 };
