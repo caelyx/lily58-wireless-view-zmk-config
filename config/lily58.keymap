@@ -65,18 +65,27 @@
 &none       &none         &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &none                           &kp PG_UP          &kp HOME       &kp UP           &kp END      &none   &trans
 &none       &none         &kp C_PREV    &kp C_PP      &kp C_NEXT    &none                           &kp PG_DN          &kp LEFT       &kp DOWN         &kp RIGHT    &none   &trans
 &none       &none         &none         &none         &none         &none         &trans    &trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LC(LS(TAB))  &kp LC(TAB)  &none   &mt LG(LC(Q)) LG(L)
-                                        &trans        &trans        &trans        &mo 3     &trans  &trans             &trans         &trans
+                                        &trans        &trans        &trans        &trans    &trans  &trans             &trans         &trans
             >;
         };
 
         Macros {
             bindings = <
-&trans  &trans  &none   &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &vimw_today  &trans  &trans    &trans  &trans  &none   &trans  &trans  &trans  &trans
-                        &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans
+&bootloader  &trans  &none   &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &vimw_today  &trans  &trans    &trans  &trans  &none   &trans  &trans  &trans  &trans
+                             &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        macros {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
