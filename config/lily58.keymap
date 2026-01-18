@@ -31,7 +31,8 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <30>;
-            bindings = <&macro_tap &kp COMMA &kp W &kp COMMA &kp W>;
+            bindings = <&macro_tap>, <&kp COMMA &kp W &kp COMMA &kp W>;
+
             label = "VIMW_TODAY";
         };
     };
@@ -42,11 +43,11 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp GRAVE                 &kp N1      &kp N2  &kp N3    &kp N4            &kp N5                                   &kp N6          &kp N7    &kp N8     &kp N9   &kp N0         &kp MINUS
-&mt LS(LA(LC(LGUI))) ESC  &kp Q       &kp W   &kp E     &kp R             &kp T                                    &kp Y           &kp U     &kp I      &kp O    &kp P          &kp BSLH
-&mt LSHFT BSPC            &kp A       &kp S   &kp D     &kp F             &kp G                                    &kp H           &kp J     &kp K      &kp L    &kp SEMI       &mt RSHFT SQT
-&kp LGUI                  &mt LALT Z  &kp X   &kp C     &kp V             &kp B          &kp LBKT     &kp RBKT     &kp N           &kp M     &kp COMMA  &kp DOT  &mt RALT FSLH  &kp RCTRL
-                                              &kp LALT  &kp LEFT_CONTROL  &mt LCTRL TAB  &lt 1 RET    &lt 2 SPACE  &mt RSHFT BSPC  &kp RGUI  &kp RALT
+&kp GRAVE                 &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                                   &kp N6          &kp N7    &kp N8     &kp N9   &kp N0     &kp MINUS
+&mt LS(LA(LC(LGUI))) ESC  &kp Q   &kp W   &kp E     &kp R             &kp T                                    &kp Y           &kp U     &kp I      &kp O    &kp P      &kp BSLH
+&mt LSHFT CAPSLOCK        &kp A   &kp S   &kp D     &kp F             &kp G                                    &kp H           &kp J     &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LGUI                  &kp Z   &kp X   &kp C     &kp V             &kp B          &kp LBKT     &kp RBKT     &kp N           &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RCTRL
+                                          &kp LALT  &kp LEFT_CONTROL  &mt LCTRL TAB  &lt 1 RET    &lt 2 SPACE  &mt RSHFT BSPC  &kp RGUI  &kp RALT
             >;
         };
 
@@ -64,11 +65,11 @@
         media_nav_sys {
             label = "Media+Nav";
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans             &trans         &trans           &trans       &trans  &bt BT_CLR_ALL
-&none        &none         &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &none                           &kp PG_UP          &kp HOME       &kp UP           &kp END      &none   &trans
-&none        &none         &kp C_PREV    &kp C_PP      &kp C_NEXT    &none                           &kp PG_DN          &kp LEFT       &kp DOWN         &kp RIGHT    &none   &trans
-&vimw_today  &none         &none         &none         &none         &none         &trans    &trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LC(LS(TAB))  &kp LC(TAB)  &none   &mt LG(LC(Q)) LG(L)
-                                         &trans        &trans        &trans        &trans    &trans  &trans             &trans         &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans             &trans                 &trans                   &trans                   &trans  &bt BT_CLR_ALL
+&none        &none         &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &none                           &kp PG_UP          &kp HOME               &mt LC(LA(UP)) UP_ARROW  &kp END                  &none   &trans
+&none        &none         &kp C_PREV    &kp C_PP      &kp C_NEXT    &none                           &kp PG_DN          &mt LC(LA(LEFT)) LEFT  &mt LA(LC(DOWN)) DOWN    &mt LC(LA(RIGHT)) RIGHT  &none   &mt LC(LG(Q)) SQT
+&vimw_today  &none         &none         &none         &none         &none         &trans    &trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)          &kp LC(LS(TAB))          &kp LC(TAB)              &none   &trans
+                                         &trans        &trans        &trans        &trans    &trans  &trans             &trans                 &trans
             >;
         };
 
