@@ -31,7 +31,7 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <30>;
-            bindings = <&macro_tap>, <&kp COMMA &kp W &kp COMMA &kp W>;
+            bindings = <&macro_tap &kp COMMA &kp W &kp COMMA &kp W>;
 
             label = "VIMW_TODAY";
         };
