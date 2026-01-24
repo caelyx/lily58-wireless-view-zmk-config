@@ -67,7 +67,7 @@
         vim_qabang: vim_qabang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp COLON &kp Q &kp A &kp EXCL &kp RET>;
+            bindings = <&macro_tap>, <&kp COLON &kp Q &kp A &kp EXCL>;
 
             label = "VIM_QABANG";
         };
@@ -75,7 +75,7 @@
         vim_wq: vim_wq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp COLON &kp W &kp Q &kp RET>;
+            bindings = <&macro_tap>, <&kp COLON &kp W &kp Q &kp A &kp RET>;
 
             label = "VIM_WQ";
         };
