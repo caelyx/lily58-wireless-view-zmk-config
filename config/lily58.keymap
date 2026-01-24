@@ -25,7 +25,7 @@
         };
 
         goto_win {
-            bindings = <&tog 4>;
+            bindings = <&tog 1>;
             key-positions = <42 43>;
         };
 
@@ -40,17 +40,17 @@
         };
 
         osl_macro {
-            bindings = <&sl 3>;
+            bindings = <&sl 4>;
             key-positions = <53 54>;
         };
 
         goto_layer1 {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <12 53>;
         };
 
         goto_layer2 {
-            bindings = <&to 2>;
+            bindings = <&to 3>;
             key-positions = <54 12>;
         };
     };
@@ -101,40 +101,7 @@
 &mt LS(LA(LC(LGUI))) ESC  &kp Q   &kp W   &kp E     &kp R      &kp T                                    &kp Y           &kp U      &kp I      &kp O    &kp P      &kp BSLH
 &kp LSHFT                 &kp A   &kp S   &kp D     &kp F      &kp G                                    &kp H           &kp J      &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LGUI                  &kp Z   &kp X   &kp C     &kp V      &kp B          &kp LBKT     &kp RBKT     &kp N           &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp LALT
-                                          &kp LALT  &kp LCTRL  &mt LCTRL TAB  &lt 1 RET    &lt 2 SPACE  &mt RSHFT BSPC  &kp PG_UP  &kp PG_DN
-            >;
-        };
-
-        symbols_numbers {
-            label = "Sym+Num";
-            bindings = <
-&kp ESC     &kp F1             &kp F2          &kp F3           &kp F4                &kp F5                                   &kp KP_NUMLOCK  &kp KP_N7  &kp KP_N8   &kp KP_NUMBER_9  &kp KP_DIVIDE    &kp BACKSPACE
-&to 0       &kp EXCL           &kp AT          &kp HASH         &kp DLLR              &kp PRCNT                                &trans          &kp KP_N4  &kp KP_N5   &kp KP_N6        &kp KP_MULTIPLY  &trans
-&caps_word  &kp CARET          &kp AMPS        &kp ASTRK        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp LS(EQUAL)   &kp KP_N1  &kp KP_N2   &kp KP_N3        &kp KP_MINUS     &trans
-&trans      &kp LG(LC(SPACE))  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT              &kp RBKT               &trans    &trans  &kp EQUAL       &kp KP_N0  &kp KP_DOT  &kp KP_ENTER     &kp KP_PLUS      &trans
-                                               &trans           &trans                &trans                 &trans    &sl 3   &kp DEL         &trans     &trans
-            >;
-        };
-
-        media_nav_sys {
-            label = "Media+Nav";
-            bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                    &kp F6             &kp F7         &kp F8           &kp F9       &kp F10             &bt BT_CLR_ALL
-&to 0       &none         &kp C_VOL_DN  &kp C_MUTE       &kp C_VOL_UP  &none                           &kp PG_UP          &kp HOME       &kp UP           &kp END      &kp LA(LCTRL)       &kp F11
-&caps_word  &none         &kp C_PREV    &kp C_PP         &kp C_NEXT    &none                           &kp PG_DN          &kp LEFT       &kp DOWN         &kp RIGHT    &kp LA(LEFT_SHIFT)  &kp F12
-&trans      &trans        &none         &vim_pasteboard  &vimw_today   &none         &trans    &trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(LEFT_SHIFT)  &trans
-                                        &trans           &trans        &trans        &sl 3     &trans  &trans             &trans         &trans
-            >;
-        };
-
-        macros_layer {
-            label = "Macros";
-            bindings = <
-&bootloader  &trans       &trans  &trans  &trans       &trans                    &trans  &trans  &vim_pasteboard  &trans  &trans  &bootloader
-&trans       &vim_qabang  &trans  &trans  &trans       &trans                    &trans  &trans  &trans           &trans  &trans  &trans
-&trans       &trans       &trans  &trans  &trans       &trans                    &trans  &trans  &trans           &trans  &trans  &trans
-&trans       &vim_wq      &trans  &trans  &vimw_today  &trans  &trans    &trans  &trans  &trans  &trans           &trans  &trans  &trans
-                                  &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans
+                                          &kp LALT  &kp LCTRL  &mt LCTRL TAB  &lt 2 RET    &lt 3 SPACE  &mt RSHFT BSPC  &kp PG_UP  &kp PG_DN
             >;
         };
 
@@ -148,6 +115,39 @@
             >;
 
             label = "win_mod";
+        };
+
+        symbols_numbers {
+            label = "Sym+Num";
+            bindings = <
+&kp ESC     &kp F1             &kp F2          &kp F3           &kp F4                &kp F5                                   &kp KP_NUMLOCK  &kp KP_N7  &kp KP_N8   &kp KP_NUMBER_9  &kp KP_DIVIDE    &kp BACKSPACE
+&to 0       &kp EXCL           &kp AT          &kp HASH         &kp DLLR              &kp PRCNT                                &trans          &kp KP_N4  &kp KP_N5   &kp KP_N6        &kp KP_MULTIPLY  &trans
+&caps_word  &kp CARET          &kp AMPS        &kp ASTRK        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp LS(EQUAL)   &kp KP_N1  &kp KP_N2   &kp KP_N3        &kp KP_MINUS     &trans
+&trans      &kp LG(LC(SPACE))  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT              &kp RBKT               &trans    &trans  &kp EQUAL       &kp KP_N0  &kp KP_DOT  &kp KP_ENTER     &kp KP_PLUS      &trans
+                                               &trans           &trans                &trans                 &trans    &sl 4   &kp DEL         &trans     &trans
+            >;
+        };
+
+        media_nav_sys {
+            label = "Media+Nav";
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                    &kp F6             &kp F7         &kp F8           &kp F9       &kp F10             &bt BT_CLR_ALL
+&to 0       &none         &kp C_VOL_DN  &kp C_MUTE       &kp C_VOL_UP  &none                           &kp PG_UP          &kp HOME       &kp UP           &kp END      &kp LA(LCTRL)       &kp F11
+&caps_word  &none         &kp C_PREV    &kp C_PP         &kp C_NEXT    &none                           &kp PG_DN          &kp LEFT       &kp DOWN         &kp RIGHT    &kp LA(LEFT_SHIFT)  &kp F12
+&trans      &trans        &none         &vim_pasteboard  &vimw_today   &none         &trans    &trans  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LG(LEFT_SHIFT)  &trans
+                                        &trans           &trans        &trans        &sl 4     &trans  &trans             &trans         &trans
+            >;
+        };
+
+        macros_layer {
+            label = "Macros";
+            bindings = <
+&bootloader  &trans       &trans  &trans  &trans       &trans                    &trans  &trans  &vim_pasteboard  &trans  &trans  &bootloader
+&trans       &vim_qabang  &trans  &trans  &trans       &trans                    &trans  &trans  &trans           &trans  &trans  &trans
+&trans       &trans       &trans  &trans  &trans       &trans                    &trans  &trans  &trans           &trans  &trans  &trans
+&trans       &vim_wq      &trans  &trans  &vimw_today  &trans  &trans    &trans  &trans  &trans  &trans           &trans  &trans  &trans
+                                  &trans  &trans       &trans  &trans    &trans  &trans  &trans  &trans
+            >;
         };
     };
 
