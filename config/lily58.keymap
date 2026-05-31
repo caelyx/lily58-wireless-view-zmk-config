@@ -107,11 +107,11 @@
 
         win_mod {
             bindings = <
-&trans     &trans  &trans  &trans    &trans    &trans                    &trans  &trans  &trans              &trans  &trans  &trans
-&trans     &trans  &trans  &trans    &trans    &trans                    &trans  &trans  &trans              &trans  &trans  &trans
-&trans     &trans  &trans  &trans    &trans    &trans                    &trans  &trans  &trans              &trans  &trans  &trans
-&kp LCTRL  &trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans              &trans  &trans  &trans
-                           &kp LGUI  &kp LALT  &trans  &trans    &trans  &trans  &trans  &kp K_CONTEXT_MENU
+&trans     &trans  &trans  &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &kp RIGHT_CONTROL
+                           &kp LGUI  &kp LALT  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
             label = "win_mod";
